@@ -3,26 +3,24 @@ import Form from './FamilyAlbum/Form'
 import FamilAlbum from './FamilyAlbum/FamilAlbum'
 import Cards from './FamilyAlbum/Cards'
 import piro from "./../Assests/FamilyAlbumCards/catsssss.jpg";
-// import rabit from "./Assets/rabitt.jpg";
-// import dog from "./Assets/image.png";
-// import Rabit from "./Assets/pinkrabit.jpg";
-// import Bcat from "./Assets/browncat.jpg";
-// import wcat from "./Assets/whitecat.jpg";
-// import Ycat from "./Assets/yellowcat.jpg";
-// import birds from "./Assets/birdi.jpg";
-// import Bdog from "./Assets/breaddog.jpg";
-// import cdog from "./Assets/chotudog.jpg";
-// import bdog from "./Assets/bluedog.jpg";
-// import snow from "./Assets/showdog.jpg";
+import rabit from "./../Assests/FamilyAlbumCards/rabitt.jpg";
+import dog from "./../Assests/FamilyAlbumCards/image.png";
+import Rabit from "./../Assests/FamilyAlbumCards/pinkrabit.jpg";
+import Bcat from "./../Assests/FamilyAlbumCards/browncat.jpg";
+import wcat from "./../Assests/FamilyAlbumCards/whitecat.jpg";
+import Ycat from "./../Assests/FamilyAlbumCards/yellowcat.jpg";
+import birds from "./../Assests/FamilyAlbumCards/birdi.jpg";
+import Bdog from "./../Assests/FamilyAlbumCards/breaddog.jpg";
+import cdog from "./../Assests/FamilyAlbumCards/chotudog.jpg";
+import bdog from "./../Assests/FamilyAlbumCards/bluedog.jpg";
+import snow from "./../Assests/FamilyAlbumCards/showdog.jpg";
 
 function App()
  {
   return (
     <>
       <FamilAlbum/>
-      <Cards/>
-      <Form/>
-
+    
       <div className="h-[350vh] w-screen bg-[#f5e4b3] flex justify-center">
       {/* Card container */}
       <div className="flex gap-10 p-10 flex-wrap justify-center">
@@ -33,7 +31,7 @@ function App()
           date="Adopted on: 12 Jan 2024"
           story="Piro has brought endless joy to our lives. He is a lovely cat. very playful and affectionate."
         />
-{/* 
+ 
         <Cards
         img={rabit}
           name="Bruno"
@@ -53,7 +51,7 @@ function App()
           date="Adopted on: 22 Apr 2024"
           story="Luna is a bundle of joy and energy. She has filled our home with happiness."
         />
-        <AlbumCard
+        <Cards
           img={Bcat}
           name="Milo"
           date="Adopted on: 30 May 2024"
@@ -77,7 +75,7 @@ function App()
           date="Adopted on: 10 Aug 2024"
           story="Daisy's playful spirit is contagious. She has brought so much joy to our family."
         />
-        <AlbumCard
+        <Cards
         img={Bdog}
           name="Max"
           date="Adopted on: 25 Sep 2024"
@@ -101,11 +99,10 @@ function App()
           date="Adopted on: 28 Dec 2024"
           story="Molly is a true blessing in our lives. Her loving nature is heartwarming."
         />
-        
-         */}
 
       </div>
       </div>
+      <Form/> 
     </>
   )
 }
