@@ -21,9 +21,7 @@ function App()
     <>
       <FamilAlbum/>
     
-      <div className="h-[350vh] w-screen bg-[#f5e4b3] flex justify-center">
-      {/* Card container */}
-      <div className="flex gap-10 p-10 flex-wrap justify-center">
+      <div className=" w-screen  bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
         
         <Cards
           img={piro}
@@ -101,7 +99,7 @@ function App()
         />
 
       </div>
-      </div>
+     
       <Form/> 
     </>
   )
