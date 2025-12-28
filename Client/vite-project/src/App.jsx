@@ -101,6 +101,7 @@ function App()
         />
       
       <LCont/>
+      <Form/>
       </div>
      
       
