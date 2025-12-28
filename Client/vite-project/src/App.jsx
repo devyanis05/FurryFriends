@@ -2,6 +2,8 @@ import React from 'react'
 import Form from './FamilyAlbum/Form'
 import FamilAlbum from './FamilyAlbum/FamilAlbum'
 import Cards from './FamilyAlbum/Cards'
+import LCont from './FamilyAlbum/LCont'
+
 import piro from "./../Assests/FamilyAlbumCards/catsssss.jpg";
 import rabit from "./../Assests/FamilyAlbumCards/rabitt.jpg";
 import dog from "./../Assests/FamilyAlbumCards/image.png";
@@ -21,7 +23,7 @@ function App()
     <>
       <FamilAlbum/>
     
-      <div className=" w-screen  bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
+      <div className=" w-screen h-[1745px] bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
         
         <Cards
           img={piro}
@@ -97,10 +99,11 @@ function App()
           date="Adopted on: 28 Dec 2024"
           story="Molly is a true blessing in our lives. Her loving nature is heartwarming."
         />
-
+      
+      <LCont/>
       </div>
      
-      <Form/> 
+      
     </>
   )
 }
