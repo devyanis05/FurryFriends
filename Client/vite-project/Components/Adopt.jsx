@@ -1,6 +1,6 @@
 import React from "react";
 import { RiAccountPinCircleLine } from "react-icons/ri";
-import logo from '../assets/logo2.png';
+// import logo from '../assets/logo2.png';
 
 
 const pets = [
@@ -41,18 +41,18 @@ export default function Adopt() {
     
       <div className='bg-[#e6b565] flex items-center justify-between px-8 py-4'>
          <div className='flex items-center gap-3'> 
-          <img src={logo} alt='logo' className='w-15 h-15' />
-          <span className='font-bold text-lg'>paws & pet</span>
+          {/* <img src={logo} alt='logo' className='w-15 h-15' /> */}
+          {/* <span className='font-bold text-lg'>paws & pet</span> */}
         </div>
 
-        <ul className='flex gap-6 font-medium'>
+        {/* <ul className='flex gap-6 font-medium'>
           <li className='cursor-pointer'>Adopt</li>
           <li className='cursor-pointer'>Donate</li>
            <li className='cursor-pointer'>Shop</li>
           <li className='cursor-pointer'>About us</li>
           <li className='cursor-pointer'>Feedback</li>
           <li className='cursor-pointer'><RiAccountPinCircleLine className="text-4xl"/> </li>
-        </ul>
+        </ul> */}
       </div>
       <h2 className="text-center text-2xl font-bold my-6">
         Meet Your New Best Friend!
