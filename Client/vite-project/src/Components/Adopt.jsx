@@ -1,6 +1,7 @@
 import React from "react";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
+import Adoptform from "../Components/Adoptform";
 
 // import logo from '../assets/logo2.png';
 
@@ -46,18 +47,7 @@ export default function Adopt() {
     
       <div className='bg-[#e6b565] flex items-center justify-between px-8 py-4'>
          <div className='flex items-center gap-3'> 
-          {/* <img src={logo} alt='logo' className='w-15 h-15' /> */}
-          {/* <span className='font-bold text-lg'>paws & pet</span> */}
         </div>
-
-        {/* <ul className='flex gap-6 font-medium'>
-          <li className='cursor-pointer'>Adopt</li>
-          <li className='cursor-pointer'>Donate</li>
-           <li className='cursor-pointer'>Shop</li>
-          <li className='cursor-pointer'>About us</li>
-          <li className='cursor-pointer'>Feedback</li>
-          <li className='cursor-pointer'><RiAccountPinCircleLine className="text-4xl"/> </li>
-        </ul> */}
       </div>
       <h2 className="text-center text-2xl font-bold my-6">
         Meet Your New Best Friend!
@@ -83,18 +73,9 @@ export default function Adopt() {
               <p className="text-sm text-gray-700">{pet.weight}</p>
             </div>
 
-            
-            {/* <button className="mt-3 bg-[#B86B2E] text-white py-2 rounded hover:bg-[#9c5622] h-[50px] ">
-              Adopt Me
-            </button> */}
-            {/* <button
-                onClick={() => handleAdopt(pet)}
-                className="mt-3 bg-[#B86B2E] text-white py-2 rounded hover:bg-[#9c5622] h-[50px]"
->
-              Adopt Me
-             </button> */}
+        
              <button
-  onClick={() => navigate("/Adoptform")}
+  onClick={() => navigate("/aoptform")}
   className="mt-3 bg-[#B86B2E] text-white py-2 rounded hover:bg-[#9c5622] h-[50px]"
 >
   Adopt Me

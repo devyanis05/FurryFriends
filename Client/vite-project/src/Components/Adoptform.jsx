@@ -1,14 +1,14 @@
 import React from "react";
 
-const Adoptpet = () => {
+const AdoptPet = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F5C977]">
+    <div className="min-h-screen flex items-center justify-center bg-[#f4c96a]">
       
-      <div className="relative bg-[#f7ecd2] w-[500px] p-6 rounded-xl 
+      <div className="relative bg-[#f7ecd2] w-[420px] p-6 rounded-xl 
                       border-[3px] ">
 
         
-        <h2 className="text-center text-xl font-bold mb-12 w-full h-3">
+        <h2 className="text-center text-xl font-bold mb-5">
           Adopt your pet
         </h2>
         <div className="flex items-center gap-3 mb-3">
@@ -44,7 +44,7 @@ const Adoptpet = () => {
           <div className="relative flex-1">
             <textarea
               rows="2"
-              className="flex-1 px-23 py-1 border-2 border-black rounded-md bg-[#fff6df]"
+              className="flex-1 px-13 py-1 border-2 border-black rounded-md bg-[#fff6df]"
             ></textarea>    
           </div>
         </div>
@@ -52,15 +52,17 @@ const Adoptpet = () => {
         {/* Button */}
         <button
           className="block mx-auto bg-[#d48b3c] px-6 py-1 
-                     border-2  font-semibold 
+                     border-2 border-black rounded-md 
+                     font-semibold shadow-[2px_2px_0px_#000]
                      hover:bg-[#c57c2e]"
         >
           Adopted
         </button>
 
+      
       </div>
     </div>
   );
 };
 
-export default Adoptpet;
+export default AdoptPet;
