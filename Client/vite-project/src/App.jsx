@@ -23,7 +23,7 @@ function App()
     <>
       <FamilAlbum/>
     
-      <div className=" w-screen h-[1745px] bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
+      <div className=" w-screen h-436.45 bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
         
         <Cards
           img={piro}
@@ -103,13 +103,13 @@ function App()
       <LCont/>
       <Form/>
       </div>
-     
+      
       
     </>
   )
 }
 
-export default App
+export default App;
 
 
 

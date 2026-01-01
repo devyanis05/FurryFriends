@@ -1,6 +1,16 @@
 import React from "react";
+import axios from "axios";`
 
 function Form() {
+    const [photo, setPhoto] = React.useState("");
+    const [name, setName] = React.useState("");
+    const [date, setDate] = React.useState("");
+    const apicall=async()=>{
+      try {
+      const connect =await axios.post("http://localhost:5000/api/auth/login",{
+      photo: }
+
+
   return (
     <div className="w-screen min-h-screen flex justify-center items-center bg-[#f5e4b3]">
       

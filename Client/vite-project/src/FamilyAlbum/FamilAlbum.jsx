@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 function FamilAlbum() {
+
   return (
     <>
     {/* a whole page will be dedicated to family album will be here the main page  */}
