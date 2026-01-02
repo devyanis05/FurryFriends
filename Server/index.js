@@ -2,15 +2,33 @@ import e from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import Donate from './Model/Donate.js';
 dotenv.config();
 
 const app = e();
+app.use(e.json());
+app.use(cors());
 const PORT = 5000;
 
-app.post("/hi", (req,res)=>{
-    res.send("hello from server");
+// MongoDB connection
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
+
+// API Route
+app.post("/donate", async (req, res) => {
+  try {
+    const data = new Donate(req.body);
+    await data.save();
+    res.json({ message: "Donation form submitted successfully!" });
+  } catch (err) {
+    res.status(5000).json({ error: "Error saving form" });
+  }
 });
 
-app.listen(PORT,()=>{
-    console.log(`your server is running on port ${PORT}`)
-});
+app.listen(process.env.PORT, () =>
+  console.log(`Server running on port ${process.env.PORT}`)
+);
+
+
+
