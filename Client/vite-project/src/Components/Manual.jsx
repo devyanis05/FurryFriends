@@ -150,30 +150,7 @@ const Manual = () => {
     </section>
   </div>
 
-  {/* Footer */}
-  <footer className="mt-16 bg-[#fff7ea] px-8 py-10 text-sm text-gray-600">
-    <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-      <div>
-        <h4 className="font-semibold mb-2">PetHeart</h4>
-        <p>Adopt. Donate. Love.</p>
-      </div>
-      <div>
-        <h4 className="font-semibold mb-2">Quick Links</h4>
-        <p>Adopt</p>
-        <p>Donate</p>
-        <p>Shop</p>
-      </div>
-      <div>
-        <h4 className="font-semibold mb-2">Newsletter</h4>
-        <input
-          type="email"
-          placeholder="Your email"
-          className="mt-2 px-3 py-2 rounded w-full"
-        />
-      </div>
-    </div>
-   </footer>
- 
+  
 
 
       
