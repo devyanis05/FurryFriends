@@ -1,6 +1,38 @@
 import React from "react";
+import axios from "axios";
+   
+  const Adoptform = () => {
+     const [Name,setname]=React.useState('');
+      const [Address,setaddress]=React.useState('');
+        const [Email,setemail]=React.useState('');
+        const [Contact,setcontactname]=React.useState('');
+        const [Petname,setpetname]=React.useState('');
 
-const Adoptform = () => {
+// const axios = require('axios');
+
+  const apicall = async()=>{
+    const connect = await axios.post("http://localhost:1224/signup",{
+      name:Name,
+      email:Email,
+      password:Password
+    })
+   console.log()  
+  try{
+    if(code ==11000){
+
+alert("user alredy exist")
+    }
+    else{
+      alert("user created")
+    
+    }
+
+  }
+  catch(err){
+    alert(err)
+
+  }
+  }
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f4c96a]">
       
