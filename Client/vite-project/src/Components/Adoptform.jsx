@@ -13,9 +13,12 @@ import axios from "axios";
   const apicall = async()=>{
     const connect = await axios.post("http://localhost:1224/signup",{
       name:Name,
+      address:Address,
       email:Email,
-      password:Password
-    })
+      contact:Contact,
+      petName:Petname
+    });
+  
    console.log()  
   try{
     if(code ==11000){
@@ -83,11 +86,12 @@ alert("user alredy exist")
 
         {/* Button */}
         <button
+         onClick={apicall}
           className="block mx-auto bg-[#d48b3c] px-6 py-1 
                      border-2 border-black rounded-md 
                      font-semibold shadow-[2px_2px_0px_#000]
                      hover:bg-[#c57c2e]"
-        >
+        >g
           Adopted
         </button>
 
