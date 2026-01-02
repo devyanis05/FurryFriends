@@ -39,7 +39,7 @@ function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="text-center border-t border-yellow-300 py-4 text-sm">
+      <div className="text-center border-t py-4 text-sm">
          2026 Our Furry Friends | Made with love for animals
       </div>
     </footer>
