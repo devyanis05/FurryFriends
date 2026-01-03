@@ -8,30 +8,38 @@ import Signup from './Components/Signup.jsx'
 import Login from './Components/Login.jsx'
 import Manual from './Components/Manual.jsx'
 import Footer from './Components/Footer.jsx'
-import feedback from './Components/feedback.jsx'
+import Homemain from './Page/Homemain.jsx';
+import Aboutsmain from './Page/Aboutsmain.jsx'
+
+
+
 function App() {
   return (
     <>
-       <Navbar/>
+    
+   
     <BrowserRouter>
+     <Navbar/>
       <Routes>
+        <Route path="/"  element={<Homemain/>} />
         <Route path="/manual" element={<Manual />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/adopt" element={<Adopt />} />
+        <Route path="/AboutUs" element={<Aboutsmain />} />
         <Route path="/adoptform" element={<Adoptform />} />
-        <Route path="/feedback" element={<feedback />} />
-      </Routes>
-     
-    </BrowserRouter> 
+
+      </Routes>      
       <Footer/>
+    </BrowserRouter>  
+     
     
    
 
 
     </>
   )
-}
+}   
 
 
 

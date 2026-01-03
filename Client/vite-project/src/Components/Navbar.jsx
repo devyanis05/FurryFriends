@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -15,23 +16,25 @@ function Navbar() {
 
       
         <ul className="hidden md:flex items-center gap-8 text-gray-700">
-          <li className="cursor-pointer hover:text-orange-500">Home</li>
-          <li className="cursor-pointer hover:text-orange-500">Adopt</li>
-          <li className="cursor-pointer hover:text-orange-500">Donate</li>
-          <li className="cursor-pointer hover:text-orange-500">Shop</li>
-          <li className="cursor-pointer hover:text-orange-500">Family Album</li>
-          <li className="cursor-pointer text-orange-500">Help</li>
+          <Link to="/"><li className="cursor-pointer hover:text-orange-500">Home</li></Link>
+          <Link to="/adopt"><li className="cursor-pointer hover:text-orange-500">Adopt</li></Link>
+          <Link to="/donate"><li className="cursor-pointer hover:text-orange-500">Donate</li></Link>
+          <Link to="/shop"><li className="cursor-pointer hover:text-orange-500">Shop</li></Link>
+          <Link to="/familyalbum"><li className="cursor-pointer hover:text-orange-500">Family Album</li></Link>
+          <Link to="/manual"><li className="cursor-pointer hover:text-orange-500">Manual</li></Link>
+          <Link to="/feedback"><li className="cursor-pointer hover:text-orange-500">Feedback</li></Link>
+      <Link to='/AboutUs' >    <li className="cursor-pointer text-orange-500">About</li></Link> 
         </ul>
 
 
         <div className="flex items-center gap-4">
-          <button className="bg-orange-400 hover:bg-orange-500 text-white px-5 py-2 rounded-full">
+         <Link to="/signup"><button className="bg-[#835d36] text-white px-5 py-2 rounded-full">
             Sign Up
-          </button>
+          </button></Link>
          
-          <button className="text-gray-700 hover:text-orange-500">
+          <Link to="/login">< button className="bg-[#835d36] text-white px-5 py-2 rounded-full">
             Log In
-          </button>
+          </button></Link>
         </div>
 
       </div>

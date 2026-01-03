@@ -3,7 +3,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const pets = [
-   { name: "Bella", weight: "3kg", img: "https://i.pinimg.com/736x/7d/fc/d9/7dfcd9ef538f746c3b89e7a9285455e3.jpg" },
+  { name: "Bella", weight: "3kg", img: "https://i.pinimg.com/736x/7d/fc/d9/7dfcd9ef538f746c3b89e7a9285455e3.jpg" },
   { name: "Brandy", weight: "5kg", img: "https://i.pinimg.com/1200x/d8/87/29/d88729223ad513c2355fb3d9e285280e.jpg" },
   { name: "Phybi", weight: "7kg", img: "https://placedog.net/300/300?id=3" },
   { name: "Smokey", weight: "9kg", img: "https://placedog.net/300/300?id=4" },
@@ -31,27 +31,40 @@ const pets = [
   { name: "Junnu", weight: "3.5kg", img: "https://i.pinimg.com/736x/44/94/fd/4494fd0258c467b9ec9777ef55fdebc8.jpg" },
 ];
 
-export default function Adopt() {
-  const navigate = useNavigate();
+// console.log(navigate);
 
+export default
+ function Adopt() {
+  const navigate = useNavigate();
+ {
   return (
+    <>
     <div className="bg-[#F5C977] min-h-screen font-sans">
+
+    
+      <div className='bg-[#e6b565] flex items-center justify-between px-8 py-4'>
+         <div className='flex items-center gap-3'> 
+        </div>
+      </div>
       <h2 className="text-center text-2xl font-bold my-6">
         Meet Your New Best Friend!
       </h2>
 
+      
       <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 px-10 pb-10">
         {pets.map((pet, index) => (
           <div
             key={index}
-            className="bg-[#FCE6B4] rounded-xl shadow-md w-[260px] h-[380px] mx-auto flex flex-col justify-between p-4"
+            className="bg-[#FCE6B4] rounded-xl shadow-md w-65 h-95 mx-auto flex flex-col justify-between p-4"
           >
+            
             <img
               src={pet.img}
               alt={pet.name}
-              className="w-full h-[200px] object-cover rounded-lg"
+              className="w-full h-50 object-cover rounded-lg"
             />
 
+            
             <div className="text-center mt-3">
               <h3 className="font-bold text-lg">{pet.name}</h3>
               <p className="text-sm text-gray-700">{pet.weight}</p>
@@ -59,13 +72,16 @@ export default function Adopt() {
 
             <button
               onClick={() => navigate("/adoptform")}
-              className="mt-3 bg-[#B86B2E] text-white py-2 rounded hover:bg-[#9c5622] h-[50px]"
+              className="mt-3 bg-[#B86B2E] text-white py-2 rounded hover:bg-[#9c5622] h-12.5"
             >
               Adopt Me
             </button>
           </div>
         ))}
       </section>
+  
     </div>
+        </>
   );
+}
 }

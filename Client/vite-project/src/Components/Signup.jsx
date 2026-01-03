@@ -62,7 +62,7 @@ function Signup() {
         </form>
 
         {/* Footer */}
-        <p className="text-center text-sm mt-4">
+         {/* <p className="text-center text-sm mt-4">
           Already have an account?
      <Link
     to="/login"
@@ -70,7 +70,7 @@ function Signup() {
   >
     Login
   </Link>
-        </p>
+        </p>  */}
       </div>
     </div>
  
