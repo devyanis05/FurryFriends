@@ -103,7 +103,7 @@ function AboutUs() {
                         className="w-48 h-48 rounded-full mx-auto mb-4 border-4 border-[#443022]"
                     />  
                     <h2 className=" text-2xl font-bold text-[#421f16] ">Poonam</h2>
-                    <p className=" text-lg opacity-80 text-[#66483e]">E`mployee</p>
+                    <p className=" text-lg opacity-80 text-[#66483e]">Employee</p>
 
                 </div>
 
