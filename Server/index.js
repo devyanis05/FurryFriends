@@ -8,7 +8,7 @@ dotenv.config();
 const app = e();
 app.use(e.json());
 app.use(cors());
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // MongoDB connection
 mongoose.connect(process.env.MongoDB)
@@ -22,7 +22,7 @@ app.post("/donate", async (req, res) => {
     await data.save();
     res.json({ message: "Donation form submitted successfully!" });
   } catch (err) {
-    res.status(5000).json({ error: "Error saving form" });
+    res.status(500).json({ error: "Error saving form" });
   }
 });
 

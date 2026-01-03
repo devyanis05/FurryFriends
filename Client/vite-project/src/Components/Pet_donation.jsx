@@ -1,23 +1,9 @@
 import React from 'react'
 import { useState } from 'react';
+import axios from 'axios';
 
 
 function Pet_donation() {
-  const [images, setImages] = useState([]);
-
-  const handleImageDrop = (e) => {
-    e.preventDefault();
-    const files = [...e.dataTransfer.files];
-    const preview = files.map(file => URL.createObjectURL(file));
-    setImages(prev => [...prev, ...preview]);
-  };
-
-  const handleImageSelect = (e) => {
-    const files = [...e.target.files];
-    const preview = files.map(file => URL.createObjectURL(file));
-    setImages(prev => [...prev, ...preview]);
-  };
-
   // state
   const [formData, setFormData] = useState({
   petType: "",
@@ -195,9 +181,9 @@ const handleSubmit = async () => {
       <input
         type="radio"
         name="size"
-        value="Small"              // ⭐ store value
+        value="Small"              
         className="accent-[#8B5E34]"
-        onChange={handleChange}    // ⭐ send to formData
+        onChange={handleChange}    
       />
       Small
     </label>
@@ -253,32 +239,6 @@ const handleSubmit = async () => {
                placeholder="Describe your pet's behavior and habits..."
                onChange={handleChange} />  
             
-
-
-
-        {/* Photos Section */}
-        <h2 className="text-xl font-semibold text-[#6B3F20] mt-6 mb-2">
-          Photos
-        </h2>
-
-        <label
-          onDragOver={(e) => e.preventDefault()}
-          onDrop={handleImageDrop}
-        >
-    
-
-          <span className="text-sm text-[#7A5331] border-2 border-dashed rounded-2xl p-2 text-center cursor-pointer">(or click to upload)</span>
-
-          <input type="file" multiple className="hidden" onChange={handleImageSelect} />
-        </label>
-
-        {/* Preview */}
-        <div className="flex gap-3 mt-3 flex-wrap">
-          {images.map((img, i) => (
-            <img key={i} src={img} alt="pet" className="w-20 h-20 rounded-xl border object-cover" />
-          ))}
-        </div> 
-
         {/* Contact Info */}
 <h2 className="text-xl font-semibold text-[#6B3F20] mt-6 mb-2">
   Your Contact Info
