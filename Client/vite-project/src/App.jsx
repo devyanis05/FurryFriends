@@ -11,6 +11,7 @@ import Footer from './Components/Footer.jsx'
 import Homemain from './Page/Homemain.jsx';
 import Aboutsmain from './Page/Aboutsmain.jsx'
 import Pet_donation from './Components/Pet_donation.jsx'
+import Feedback from './Components/Feedback.jsx'
 
 
 
@@ -30,6 +31,7 @@ function App() {
         <Route path="/AboutUs" element={<Aboutsmain />} />
         <Route path="/adoptform" element={<Adoptform />} />
         <Route path="/donate" element={<Pet_donation />} />
+        <Route path="/feedback" element={<Feedback />} />
 
       </Routes>      
       <Footer/>

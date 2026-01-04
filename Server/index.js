@@ -3,8 +3,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import users from './Models/adoptuser.js';
 import Donate from './Models/Donate.js';
+import feedback from './Models/feedback.js';
 import dotenv from 'dotenv';
-import feedback from './modules/feedback.js';
+
 
 dotenv.config();
 
@@ -21,23 +22,15 @@ mongoose.connect(process.env.Mongodb)
 
 app.post("/feedback", async (req ,res)=>{
     try {
-        const data = new Donate(req.body);
-        await Data.save();
+        const data = new feedback(req.body);
+        await data.save();
 res.json({ message: " Feedback firm submitted successfully"});
     } catch (err){
         res.status(5000).json({error: "Error saving form"});
     }
 });
 
-app.listen(process.env.PORT,() =>
-console.log("server running on port ${process.env.PORT} ")
-);
-const PORT = 1234;
 
-app.use(cors());
-const PORT = 5000;
-app.use(e.json());
-app.use(cors());
 
 // MongoDB connection
 mongoose.connect(process.env.MongoDB)

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function feedback() {
+function Feedback() {
   return (
     <>
     <h1 className='font-bold text-3xl bg-[#F3C66A] pt-10 text-center'>We'd Love to Hear From You!</h1>
@@ -33,4 +33,4 @@ function feedback() {
   )
 }
 
-export default feedback
+export default Feedback
