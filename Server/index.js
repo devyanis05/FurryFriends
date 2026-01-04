@@ -2,16 +2,40 @@ import e from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import users from './Models/adoptuser.js';
+import Donate from './Models/Donate.js';
 import dotenv from 'dotenv';
-dotenv.config(); 
+
+dotenv.config();
 
 
 
 const app = e();
 const PORT = 5000;
-
-app.use(cors());
 app.use(e.json());
+app.use(cors());
+
+// MongoDB connection
+mongoose.connect(process.env.MongoDB)
+.then(() => console.log("MongoDB Connected"))
+.catch(err => console.log(err));
+
+// API Route
+app.post("/donate", async (req, res) => {
+  try {
+    const data = new Donate(req.body);
+    await data.save();
+    res.json({ message: "Donation form submitted successfully!" });
+  } catch (err) {
+    res.status(500).json({ error: "Error saving form" });
+  }
+});
+
+
+
+
+
+
+
 const Database_conection= async()=>
  {
     const connect = await mongoose.connect(process.env.MongoDB);

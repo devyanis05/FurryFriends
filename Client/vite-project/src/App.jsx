@@ -10,6 +10,7 @@ import Manual from './Components/Manual.jsx'
 import Footer from './Components/Footer.jsx'
 import Homemain from './Page/Homemain.jsx';
 import Aboutsmain from './Page/Aboutsmain.jsx'
+import Pet_donation from './Components/Pet_donation.jsx'
 
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/adopt" element={<Adopt />} />
         <Route path="/AboutUs" element={<Aboutsmain />} />
         <Route path="/adoptform" element={<Adoptform />} />
+        <Route path="/donate" element={<Pet_donation />} />
 
       </Routes>      
       <Footer/>
