@@ -7,7 +7,7 @@ function Bhome5() {
     return (
         <>
             <section className="bg-[#fde7a5] py-12 px-4">
-                {/* Header */}
+            
                 <div className="flex items-center justify-between mb-6">
                     <h2 className="text-xl font-semibold text-[#c47a2c]">
                         Featured Pets
@@ -17,15 +17,15 @@ function Bhome5() {
                     </button>
                 </div>
 
-                {/* Cards */}
+            
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-                    {/* Card 1 */}
+                    
                     <div className="bg-white rounded-3xl shadow-md overflow-hidden">
                         <div className="relative">
                             <img
                                 src={img1}
-                                alt="Bella"
+                                alt="Billi"
                                 className="w-full h-48 object-cover"
                             />
                             <span className="absolute top-3 right-3 bg-green-100 text-green-700 text-xs px-3 py-1 rounded-full">
@@ -45,7 +45,7 @@ function Bhome5() {
                         </div>
                     </div>
 
-                    {/* Card 2 */}
+                    
                     <div className="bg-white rounded-3xl shadow-md overflow-hidden">
                         <div className="relative">
                             <img

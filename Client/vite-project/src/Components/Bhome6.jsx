@@ -7,7 +7,7 @@ function Bhome6() {
     return (
         <>
             <section className="bg-[#fde7a5] py-12 px-4">
-                {/* Header */}
+            
                 <div className="flex items-center justify-between mb-6">
                     <div>
                         <h2 className="text-xl font-semibold text-[#c47a2c]">
@@ -22,10 +22,10 @@ function Bhome6() {
                     </button>
                 </div>
 
-                {/* Products */}
+                
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
 
-                    {/* Product 1 */}
+                
                     <div className="bg-white rounded-3xl shadow-md p-4">
                         <div className="bg-teal-600 rounded-2xl p-6 mb-4 flex justify-center">
                             <img
@@ -45,7 +45,7 @@ function Bhome6() {
                         </div>
                     </div>
 
-                    {/* Product 2 */}
+                
                     <div className="bg-white rounded-3xl shadow-md p-4">
                         <div className="bg-gray-100 rounded-2xl p-6 mb-4 flex justify-center">
                             <img
@@ -65,7 +65,7 @@ function Bhome6() {
                         </div>
                     </div>
 
-                    {/* Product 3 */}
+            
                     <div className="bg-white rounded-3xl shadow-md p-4">
                         <div className="bg-gray-100 rounded-2xl p-6 mb-4 flex justify-center">
                             <img
@@ -85,7 +85,7 @@ function Bhome6() {
                         </div>
                     </div>
 
-                    {/* Product 4 */}
+                
                     <div className="bg-white rounded-3xl shadow-md p-4">
                         <div className="bg-gray-100 rounded-2xl p-6 mb-4 flex justify-center">
                             <img

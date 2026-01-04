@@ -13,8 +13,6 @@ function Bhome4() {
                 </h2>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-
-                    {/* Cats */}
                     <div className="bg-[#fde7a5] rounded-2xl shadow-md p-5 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-[#c47a2c]">
                             <img
@@ -26,7 +24,7 @@ function Bhome4() {
                         <p className="text-[#c47a2c] font-medium">Cats</p>
                     </div>
 
-                    {/* Dogs */}
+                
                     <div className="bg-[#fde7a5] rounded-2xl shadow-md p-5 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-[#c47a2c]">
                             <img
@@ -37,8 +35,6 @@ function Bhome4() {
                         </div>
                         <p className="text-[#c47a2c] font-medium">Dogs</p>
                     </div>
-
-                    {/* Birds */}
                     <div className="bg-[#fde7a5] rounded-2xl shadow-md p-5 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-[#c47a2c]">
                             <img
@@ -49,8 +45,6 @@ function Bhome4() {
                         </div>
                         <p className="text-[#c47a2c] font-medium">Birds</p>
                     </div>
-
-                    {/* Rabbits */}
                     <div className="bg-[#fde7a5] rounded-2xl shadow-md p-5 flex flex-col items-center">
                         <div className="w-20 h-20 rounded-full overflow-hidden mb-3 border-2 border-[#c47a2c]">
                             <img
