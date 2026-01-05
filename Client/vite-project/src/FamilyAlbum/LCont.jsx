@@ -11,7 +11,7 @@ function LCont() {
 
         <div
         className='h-[9vh] text-[3vh] w-auto bg-[#ffcc80]  text-amber-800'>
-          Share Your Story By Filling the form -->
+          Share Your Story By Filling the form --
         </div>
       </div>
        
