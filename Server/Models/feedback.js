@@ -1,5 +1,5 @@
-import { Schema,model } from "mongoose";
-const feedbackSchema=new Schema({
+import mongoose from "mongoose";
+const feedbackSchema=new mongoose.Schema({
     
   category: String,
   name: String,
@@ -11,5 +11,5 @@ const feedbackSchema=new Schema({
   createdAt: Date
 
 });
-const feedback=model('feedback',feedbackSchema);
+const feedback=mongoose.model('feedback',feedbackSchema);
 export default feedback;

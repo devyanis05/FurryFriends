@@ -1,5 +1,5 @@
-import { Schema,model } from "mongoose";
-const userSchema=new Schema({
+import mongoose from "mongoose";
+const adoptSchema=new mongoose.Schema({
     name:{
         type:String,    
         required:true
@@ -23,5 +23,5 @@ const userSchema=new Schema({
         required:true
     }
 });
-const User=model('User',userSchema);
-export default User;
+const adopt=mongoose.model('adopt',adoptSchema);
+export default adopt;

@@ -1,9 +1,10 @@
 import e from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import users from './Models/adoptuser.js';
+import adopt from './Models/adoptuser.js';
 import Donate from './Models/Donate.js';
 import feedback from './Models/feedback.js';
+import User from './Models/Signup.js';
 import dotenv from 'dotenv';
 
 
@@ -15,44 +16,6 @@ const app = e();
 app.use(e.json());
 app.use(cors());
 const PORT = 5000;
-
-mongoose.connect(process.env.Mongodb)
-.then(()=> console.log("MongoDB Connected"))
-.catch(err => console.log(err));
-
-app.post("/feedback", async (req ,res)=>{
-    try {
-        const data = new feedback(req.body);
-        await data.save();
-res.json({ message: " Feedback firm submitted successfully"});
-    } catch (err){
-        res.status(5000).json({error: "Error saving form"});
-    }
-});
-
-
-
-// MongoDB connection
-mongoose.connect(process.env.MongoDB)
-.then(() => console.log("MongoDB Connected"))
-.catch(err => console.log(err));
-
-// API Route
-app.post("/donate", async (req, res) => {
-  try {
-    const data = new Donate(req.body);
-    await data.save();
-    res.json({ message: "Donation form submitted successfully!" });
-  } catch (err) {
-    res.status(500).json({ error: "Error saving form" });
-  }
-});
-
-
-
-
-
-
 
 const Database_conection= async()=>
  {
@@ -69,16 +32,58 @@ Database_conection();
 
 
 
-app.post("/Adoptdata", (req, res) => {
-  const { name, address,email, contact, petName } = req.body;
+app.post("/feedback", async (req ,res)=>{
+    try {
+        const datas = new feedback(req.body);
+        await datas.save();
+res.json({ message: " Feedback firm submitted successfully"});
+    } catch (err){
+        res.status(5000).json({error: "Error saving form"});
+    }
+});
 
-  console.log("Adoption Request Received:");
-  console.log(req.body);
+app.post("/signup", async (req, res) => {
+  try {
+    const user = new User(req.body);
+    await user.save();
+
+    res.status(201).json({ message: "User registered successfully!" });
+
+  } catch (err) {
+    if (err.code === 11000) {
+      return res.status(400).json({ error: "Email already exists" });
+    }
+
+    res.status(500).json({ error: err.message });
+  }
+});
 
 
-  res.status(200).json({
-    message: "Pet adoption form submitted successfully ",
-  });
+
+
+
+// API Route
+app.post("/donate", async (req, res) => {
+  try {
+    const data = new Donate(req.body);
+    await data.save();
+    res.json({ message: "Donation form submitted successfully!" });
+  } catch (err) {
+    res.status(500).json({ error: "Error saving form" });
+  }
+});
+
+
+
+app.post("/Adoptdata", async(req, res) => {
+  try{
+     const data = new adopt(req.body);
+     await data.save();
+      res.json({ message: "Pet adoption form submitted successfully"});
+  }catch (err){
+    res.status(500).json({ error: "Error saving form" });
+  }
+ 
 });
 
 app.listen(PORT, () => {

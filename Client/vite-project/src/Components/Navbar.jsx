@@ -23,7 +23,7 @@ function Navbar() {
           {/* <Link to="/familyalbum"><li className="cursor-pointer hover:text-orange-500">Family Album</li></Link> */}
           <Link to="/manual"><li className="cursor-pointer hover:text-orange-500">Manual</li></Link>
           <Link to="/feedback"><li className="cursor-pointer hover:text-orange-500">Feedback</li></Link>
-      <Link to='/AboutUs' >    <li className="cursor-pointer text-orange-500">About</li></Link> 
+      <Link to='/AboutUs' >    <li className="cursor-pointer hover:text-orange-500">About</li></Link> 
         </ul>
 
 

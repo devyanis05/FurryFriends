@@ -1,10 +1,11 @@
 
 import React from 'react'
-import Form from './FamilyAlbum/Form'
-import FamilAlbum from './FamilyAlbum/FamilAlbum'
-import Cards from './FamilyAlbum/Cards'
-import LCont from './FamilyAlbum/LCont'
 import { BrowserRouter , Routes, Route } from 'react-router-dom'
+// import Form from './FamilyAlbum/Form'
+// import FamilAlbum from './FamilyAlbum/FamilAlbum'
+// import Cards from './FamilyAlbum/Cards'
+// import LCont from './FamilyAlbum/LCont'
+
 import Adopt from './Components/Adopt.jsx'
 import Adoptform from './Components/Adoptform.jsx'
 import Navbar from './Components/Navbar.jsx'
@@ -19,24 +20,26 @@ import Feedback from './Components/Feedback.jsx'
 
 
 
-import piro from "./../Assests/FamilyAlbumCards/catsssss.jpg";
-import rabit from "./../Assests/FamilyAlbumCards/rabitt.jpg";
-import dog from "./../Assests/FamilyAlbumCards/image.png";
-import Rabit from "./../Assests/FamilyAlbumCards/pinkrabit.jpg";
-import Bcat from "./../Assests/FamilyAlbumCards/browncat.jpg";
-import wcat from "./../Assests/FamilyAlbumCards/whitecat.jpg";
-import Ycat from "./../Assests/FamilyAlbumCards/yellowcat.jpg";
-import birds from "./../Assests/FamilyAlbumCards/birdi.jpg";
-import Bdog from "./../Assests/FamilyAlbumCards/breaddog.jpg";
-import cdog from "./../Assests/FamilyAlbumCards/chotudog.jpg";
-import bdog from "./../Assests/FamilyAlbumCards/bluedog.jpg";
-import snow from "./../Assests/FamilyAlbumCards/showdog.jpg";
+// import piro from "./../Assests/FamilyAlbumCards/catsssss.jpg";
+// import rabit from "./../Assests/FamilyAlbumCards/rabitt.jpg";
+// import dog from "./../Assests/FamilyAlbumCards/image.png";
+// import Rabit from "./../Assests/FamilyAlbumCards/pinkrabit.jpg";
+// import Bcat from "./../Assests/FamilyAlbumCards/browncat.jpg";
+// import wcat from "./../Assests/FamilyAlbumCards/whitecat.jpg";
+// import Ycat from "./../Assests/FamilyAlbumCards/yellowcat.jpg";
+// import birds from "./../Assests/FamilyAlbumCards/birdi.jpg";
+// import Bdog from "./../Assests/FamilyAlbumCards/breaddog.jpg";
+// import cdog from "./../Assests/FamilyAlbumCards/chotudog.jpg";
+// import bdog from "./../Assests/FamilyAlbumCards/bluedog.jpg";
+// import snow from "./../Assests/FamilyAlbumCards/showdog.jpg";
 
 function App()
  {
   return (
     <>
-      <FamilAlbum/>
+{/*       
+     <FamilAlbum/>
+     
     
       <div className=" w-screen h-436.45 bg-[#f5e4b3] flex flex-wrap gap-16 p-10 justify-center">
         
@@ -117,8 +120,7 @@ function App()
       
       <LCont/>
       <Form/>
-      </div>
-      
+      </div>  */}
       
     
    
@@ -134,6 +136,9 @@ function App()
         <Route path="/adoptform" element={<Adoptform />} />
         <Route path="/donate" element={<Pet_donation />} />
         <Route path="/feedback" element={<Feedback />} />
+        {/* <Route path="/familyalbum" element={<FamilAlbum />} /> */}
+        
+        
 
       </Routes>      
       <Footer/>
